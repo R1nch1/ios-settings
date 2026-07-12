@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- ТЕ САМЫЕ PWA ТЕГИ ДЛЯ ПОЛНОЭКРАННОГО РЕЖИМА -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Settings">
+    
+    <title>Настройки iOS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="phone-container">
+    <!-- ГЛАВНЫЙ ЭКРАН НАСТРОЕК -->
+    <div id="main-screen">
+        <h1 class="main-title">Настройки</h1>
+
+        <div class="search-bar-ios">
+            <i class="fa-solid fa-magnifyingglass search-icon-main"></i>
+            <span class="search-placeholder">Поиск</span>
+            <i class="fa-solid fa-microphone mic-icon-main"></i>
+        </div>
+
+        <div class="section">
+            <div class="list-item profile-item">
+                <div class="avatar-placeholder"><i class="fa-solid fa-user"></i></div>
+                <div class="profile-info">
+                    <h2>Дауд Сраждинов</h2>
+                    <p>Аккаунт Apple, iCloud и другое</p>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow"></i>
+            </div>
+            <div class="list-item">
+                <span class="item-text">Предложения Аккаунта Apple</span>
+                <div class="right-content"><span class="badge">4</span><i class="fa-solid fa-chevron-right arrow"></i></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="list-item"><div class="item-left"><div class="icon orange"><i class="fa-solid fa-plane"></i></div><span class="item-text">Авиарежим</span></div><label class="toggle-switch"><input type="checkbox"><span class="slider"></span></label></div>
+            <div class="list-item"><div class="item-left"><div class="icon blue"><i class="fa-solid fa-wifi"></i></div><span class="item-text">Wi-Fi</span></div><div class="right-content"><span class="value">Bard_5_G</span><i class="fa-solid fa-chevron-right arrow"></i></div></div>
+            <div class="list-item"><div class="item-left"><div class="icon blue"><i class="fa-solid fa-bluetooth-b"></i></div><span class="item-text">Bluetooth</span></div><div class="right-content"><span class="value">Вкл.</span><i class="fa-solid fa-chevron-right arrow"></i></div></div>
+            <div class="list-item"><div class="item-left"><div class="icon green"><i class="fa-solid fa-tower-cell"></i></div><span class="item-text">Сотовая связь</span></div><i class="fa-solid fa-chevron-right arrow"></i></div>
+            <div class="list-item"><div class="item-left"><div class="icon green"><i class="fa-solid fa-link"></i></div><span class="item-text">Режим модема</span></div><div class="right-content"><span class="value">Выкл.</span><i class="fa-solid fa-chevron-right arrow"></i></div></div>
+            <div class="list-item clickable" id="battery-btn"><div class="item-left"><div class="icon green"><i class="fa-solid fa-battery-full"></i></div><span class="item-text">Аккумулятор</span></div><i class="fa-solid fa-chevron-right arrow"></i></div>
+            <div class="list-item"><div class="item-left"><div class="icon blue"><i class="fa-solid fa-shield-halved"></i></div><span class="item-text">VPN</span></div><div class="right-content"><span class="value">Не подключено</span><i class="fa-solid fa-chevron-right arrow"></i></div></div>
+        </div>
+
+        <div class="section">
+            <div class="list-item"><div class="item-left"><div class="icon gray"><i class="fa-solid fa-gear"></i></div><span class="item-text">Основные</span></div><i class="fa-solid fa-chevron-right arrow"></i></div>
+            <div class="list-item"><div class="item-left"><div class="icon blue"><i class="fa-solid fa-universal-access"></i></div><span class="item-text">Универсальный доступ</span></div><i class="fa-solid fa-chevron-right arrow"></i></div>
+        </div>
+
+        <div class="section">
+            <div class="list-item"><div class="item-left"><div class="icon gray"><i class="fa-solid fa-camera"></i></div><span class="item-text">Камера</span></div><i class="fa-solid fa-chevron-right arrow"></i></div>
+            <div class="list-item"><div class="item-left"><div class="icon cyan"><i class="fa-solid fa-images"></i></div><span class="item-text">Обои</span></div><i class="fa-solid fa-chevron-right arrow"></i></div>
+            <div class="list-item"><div class="item-left"><div class="icon black-icon"><i class="fa-solid fa-clock"></i></div><span class="item-text">Ожидание</span></div><i class="fa-solid fa-chevron-right arrow"></i></div>
+            <div class="list-item"><div class="item-left"><div class="icon blue"><i class="fa-solid fa-sun"></i></div><span class="item-text">Экран и яркость</span></div><i class="fa-solid fa-chevron-right arrow"></i></div>
+        </div>
+
+        <div class="section">
+            <div class="list-item"><div class="item-left"><div class="icon blue"><i class="fa-solid fa-border-all"></i></div><span class="item-text">Приложения</span></div><i class="fa-solid fa-chevron-right arrow"></i></div>
+        </div>
+
+        <div class="section" style="margin-bottom: 40px;">
+            <div class="list-item clickable" id="developer-btn"><div class="item-left"><div class="icon gray"><i class="fa-solid fa-hammer"></i></div><span class="item-text">Разработчик</span></div><i class="fa-solid fa-chevron-right arrow"></i></div>
+        </div>
+    </div>
+
+    <!-- ЭКРАН АККУМУЛЯТОРА -->
+    <div id="battery-screen" class="hidden">
+        <div class="battery-header">
+            <button class="back-to-main-btn"><i class="fa-solid fa-chevron-left"></i> Настройки</button>
+            <span class="screen-title-center">Аккумулятор</span>
+            <div style="width: 60px;"></div>
+        </div>
+        <div class="section battery-level-card">
+            <div class="level-header">
+                <span class="huge-percent"><span id="main-battery-digits">79</span> <span class="percent-sign">%</span></span>
+                <i class="fa-solid fa-circle-info info-icon"></i>
+            </div>
+            <p class="last-charge-text" id="dynamic-charge-text">Последняя зарядка до 82%: 1 час назад</p>
+            <div class="progress-bar-container"><div class="progress-bar-fill" id="main-battery-slider" style="width: 79%;"></div></div>
+        </div>
+        <div class="section autobrightness-card">
+            <div class="list-item no-border"><div class="item-left"><div class="icon-circle blue-light"><i class="fa-solid fa-sun"></i></div><span class="item-text bold-text">Автояркость</span></div><i class="fa-solid fa-chevron-right arrow"></i></div>
+            <p class="card-desc">Автояркость сейчас выключена.</p>
+        </div>
+        <h3 class="section-title-ios">Использование за день</h3>
+        <div class="section usage-main-card">
+            <p class="usage-summary">Сегодня Вы расходуете меньше заряда, чем обычно.</p>
+        </div>
+    </div>
+
+    <!-- ЭКРАН РАЗРАБОТЧИК -->
+    <div id="developer-screen" class="hidden">
+        <div class="battery-header">
+            <button class="back-to-main-btn"><i class="fa-solid fa-chevron-left"></i> Настройки</button>
+            <span class="screen-title-center">Разработчик</span>
+            <div style="width: 60px;"></div>
+        </div>
+        <div class="section admin-panel">
+            <h4>Панель конфигурации</h4>
+            <input type="number" id="input-current-charge" placeholder="Текущий заряд" value="79">
+            <input type="number" id="input-charge-percent" placeholder="До скольки (%)" value="82">
+            <input type="text" id="input-charge-time" placeholder="Когда" value="1 час назад">
+            <button id="update-charge-btn">Применить изменения</button>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
